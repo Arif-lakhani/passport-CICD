@@ -34,7 +34,7 @@ public class CustomerController {
 
     @GetMapping("/test")
     public String test(){
-        return "hey there test successful. Demo cI/CD";
+        return "hey there test successful. Demo CI/CD -> Fixed the typo in here";
     }
 
     @PostMapping( value = "/create" , consumes = "application/json", produces = "application/json")
