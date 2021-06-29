@@ -32,6 +32,11 @@ public class CustomerController {
         this.orderService = orderService;
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "hey there test successful. Demo cI/CD";
+    }
+
     @PostMapping( value = "/create" , consumes = "application/json", produces = "application/json")
     public Response<String> createOrder(@RequestBody OrderDTO order){
         return orderService.createOrder(order) == Boolean.TRUE ?
